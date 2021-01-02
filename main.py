@@ -16,13 +16,13 @@ with sr.Microphone() as source:
 from vosk import Model, KaldiRecognizer
 import os
 
-if not os.path.exists("model"):
+if not os.path.exists('model'):
     print ("Please download the model from https://alphacephei.com/vosk/models and unpack as 'model' in the current folder.")
     exit (1)
 
 import pyaudio
 
-model = Model("model")
+model = Model('model')
 rec = KaldiRecognizer(model, 16000)
 
 p = pyaudio.PyAudio()
