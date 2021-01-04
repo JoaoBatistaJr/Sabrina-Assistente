@@ -32,7 +32,7 @@ stream = p.open(format=pyaudio.paInt16, channels=1,
 stream.start_stream()
 
 while True:
-    data = stream.read(2000)
+    data = stream.read(4000)
     if len(data) == 0:
         break
     if rec.AcceptWaveform(data):
